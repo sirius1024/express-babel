@@ -1,16 +1,16 @@
-var express = require('express');
-var app = express();
-var fs = require('fs');
-var Promise = require('bluebird');
+const express = require('express');
+const app = express();
+const fs = require('fs');
+const Promise = require('bluebird');
 
 app.get('/', function (req, res) {
     testAsync();
     res.send('Hello World!');
 });
 
-var server = app.listen(3000, function () {
-    var host = server.address().address;
-    var port = server.address().port;
+const server = app.listen(3000, function () {
+    let host = server.address().address;
+    let port = server.address().port;
 
     console.log('Example app listening at http://%s:%s', host, port);
 });
@@ -27,3 +27,4 @@ async function testAsync(name) {
     console.log(name);
 }
 let readFile = Promise.promisify(fs.readFile);
+//Have fun ;-/
