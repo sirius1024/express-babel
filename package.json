@@ -1,39 +1,53 @@
 {
   "name": "express-babel",
-  "version": "0.0.2",
+  "code": "starter",
+  "version": "1.0.0",
   "description": "express/es7/babel",
+  "author": "Sirius Guo <cealer@foxmail.com>",
+  "license": "MIT",
   "main": "dist/index.js",
   "scripts": {
     "prestart": "npm run -s build",
     "start": "node dist/index.js",
-    "dev": "nodemon src/index.js --exec \"node -r dotenv/config -r babel-register\"",
+    "dev": "nodemon src/index.js --exec \"node -r babel-register\"",
     "clean": "rimraf dist",
     "build": "npm run clean && mkdir -p dist && babel src -s -D -d dist",
     "test": "jest --watch",
-    "lint": "esw -w src test"
+    "lint": "esw -w src test",
+    "y": "yarn --no-lockfile"
   },
+  "keywords": [
+    "express",
+    "babel",
+    "starter"
+  ],
   "dependencies": {
+    "alphabetjs": "^0.1.4",
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "body-parser": "^1.18.2",
+    "colors": "^1.2.1",
     "express": "^4.16.3",
+    "lodash": "^4.17.5",
+    "moment": "^2.22.1",
     "morgan": "^1.9.0",
     "pug": "^2.0.3",
-    "rimraf": "^2.6.2"
+    "rimraf": "^2.6.2",
+    "tracer": "^0.8.12"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.2",
+    "babel-eslint": "^8.2.3",
     "babel-jest": "^22.4.3",
     "babel-register": "^6.26.0",
-    "dotenv": "^5.0.1",
     "eslint": "^4.19.1",
-    "eslint-plugin-import": "^2.9.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.11.0",
     "eslint-plugin-jest": "^21.15.0",
-    "eslint-watch": "^3.1.3",
+    "eslint-watch": "^3.1.4",
     "jest": "^22.4.3",
-    "nodemon": "^1.17.2",
+    "nodemon": "^1.17.3",
     "supertest": "^3.0.0"
   },
   "babel": {
@@ -52,32 +66,7 @@
       "transform-class-properties"
     ]
   },
-  "eslintConfig": {
-    "parser": "babel-eslint",
-    "plugins": [
-      "import",
-      "jest"
-    ],
-    "parserOptions": {
-      "ecmaVersion": 2017,
-      "sourceType": "module"
-    },
-    "env": {
-      "node": true,
-      "jest": true
-    },
-    "extends": [
-      "eslint:recommended"
-    ],
-    "rules": {
-      "jest/no-focused-tests": 2,
-      "jest/no-identical-title": 2
-    }
-  },
   "jest": {
     "testEnvironment": "node"
-  },
-  "directories": {
-    "test": "test"
   }
 }

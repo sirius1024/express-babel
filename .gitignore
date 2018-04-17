@@ -1,6 +1,3 @@
-# https://github.com/github/gitignore/blob/master/Node.gitignore #
-##################################################################
-
 # Logs
 logs
 *.log
@@ -23,7 +20,7 @@ coverage
 # nyc test coverage
 .nyc_output
 
-# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
+# Grunt intermediate storage 
 .grunt
 
 # Bower dependency directory (https://bower.io/)
@@ -63,3 +60,6 @@ typings/
 # Custom
 .idea
 dist
+
+yarn.lock
+package-lock.json
