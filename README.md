@@ -1,5 +1,12 @@
 # Express.js with Babel Boilerplate
 
+# NOTICE!
+This is the old version that call express routes directly.
+
+The master branch version is the **Convention Over Configuration** version that you could just export route objects, and express initer'll load them automatically.
+
+For more details checkout master branch please.
+
 ### Features:
 - [Express.js](https://expressjs.com/) as the web framework.
 - ES2017+ support with [Babel](https://babeljs.io/).
